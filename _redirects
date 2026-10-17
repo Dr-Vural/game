@@ -1,0 +1,8 @@
+# SPA fallback: tüm yollar index.html'e döner, JS router devralır
+# Statik dosyalar hariç
+/favicon.svg  /favicon.svg  200
+/ads.txt      /ads.txt      200
+/robots.txt   /robots.txt   200
+/sitemap.xml  /sitemap.xml  200
+/assets/*     /assets/:splat 200
+/*            /index.html   200

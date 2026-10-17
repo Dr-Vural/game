@@ -1,0 +1,2712 @@
+/* VuMaTech Game — stil */
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-2: #ffffff;
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --dim: #94a3b8;
+  --line: #e2e8f0;
+  --line-2: #cbd5e1;
+  --blue: #2563eb;
+  --blue-2: #3b82f6;
+  --blue-light: #dbeafe;
+  --orange: #f97316;
+  --orange-2: #fb923c;
+  --orange-light: #ffedd5;
+  --green: #10b981;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --red: #ef4444;
+  --header-bg: rgba(255,255,255,0.96);
+  --shadow: 0 4px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 40px -12px rgba(37,99,235,0.18);
+  --radius: 14px;
+}
+
+/* ============================================
+   KARANLIK TEMA - Slate tabanlı, renk uyumu
+   ============================================ */
+:root[data-theme="dark"] {
+  --bg: #0f172a;              /* slate-900: ana arka plan */
+  --surface: #1e293b;         /* slate-800: kartlar, hero */
+  --surface-2: #273449;       /* slate-750: iç yüzeyler */
+  --ink: #f1f5f9;             /* slate-100: ana metin */
+  --ink-2: #cbd5e1;           /* slate-300: ikincil metin */
+  --dim: #94a3b8;             /* slate-400: üçüncül metin */
+  --line: #334155;            /* slate-700: çizgiler */
+  --line-2: #475569;          /* slate-600: belirgin çizgiler */
+  --blue: #60a5fa;            /* blue-400: karanlıkta daha parlak */
+  --blue-2: #3b82f6;          /* blue-500 */
+  --blue-light: #1e3a8a;      /* blue-900: hafif arka plan */
+  --orange: #fb923c;          /* orange-400: karanlıkta daha parlak */
+  --orange-2: #f97316;        /* orange-500 */
+  --orange-light: #7c2d12;    /* orange-900: hafif arka plan */
+  --green: #34d399;           /* emerald-400 */
+  --pink: #f472b6;            /* pink-400 */
+  --purple: #a78bfa;          /* violet-400 */
+  --red: #f87171;             /* red-400 */
+  --header-bg: rgba(15,23,42,0.92);
+  --shadow: 0 4px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-lg: 0 20px 40px -12px rgba(0,0,0,0.6);
+}
+
+/* Karanlık temada global ayarlar */
+:root[data-theme="dark"] body {
+  background: var(--bg);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-header {
+  background: var(--header-bg) !important;
+  border-bottom-color: var(--line) !important;
+}
+:root[data-theme="dark"] .vmt-logo-text {
+  color: var(--ink) !important;
+}
+:root[data-theme="dark"] .vmt-logo-text .ma {
+  color: var(--ink) !important;
+}
+:root[data-theme="dark"] .vmt-logo-text .tech {
+  color: var(--ink) !important;
+}
+
+/* Hero bölümü */
+:root[data-theme="dark"] .vmt-hero {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e3a8a 100%) !important;
+}
+:root[data-theme="dark"] .vmt-hero h1,
+:root[data-theme="dark"] .vmt-hero p,
+:root[data-theme="dark"] .vmt-hero-tag {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-hero-stats > div .lbl {
+  color: var(--dim);
+}
+
+/* Arama kutusu */
+:root[data-theme="dark"] .vmt-search-desktop input,
+:root[data-theme="dark"] #vmt-search-input {
+  background: var(--surface-2);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-search-desktop input::placeholder,
+:root[data-theme="dark"] #vmt-search-input::placeholder {
+  color: var(--dim);
+}
+
+/* Tab'lar */
+:root[data-theme="dark"] .vmt-tab {
+  background: var(--surface);
+  color: var(--ink-2);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-tab:hover {
+  background: var(--surface-2);
+  border-color: var(--line-2);
+}
+
+/* Tab scroll ok butonları ve fade */
+:root[data-theme="dark"] .vmt-tab-arrow {
+  background: var(--surface);
+  color: var(--blue);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-tabs-wrap::before {
+  background: linear-gradient(90deg, var(--bg) 20%, transparent);
+}
+:root[data-theme="dark"] .vmt-tabs-wrap::after {
+  background: linear-gradient(90deg, transparent, var(--bg) 80%);
+}
+
+/* Kartlar - grid, strip, featured */
+:root[data-theme="dark"] .vmt-card,
+:root[data-theme="dark"] .vmt-feat-card,
+:root[data-theme="dark"] .vmt-strip-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-card-info,
+:root[data-theme="dark"] .vmt-card-title {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-card-info .meta,
+:root[data-theme="dark"] .vmt-card-info .plays {
+  color: var(--dim);
+}
+:root[data-theme="dark"] .vmt-strip-title {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-strip-img {
+  background: var(--surface-2);
+}
+
+/* Bölüm başlıkları */
+:root[data-theme="dark"] .vmt-section-head h2 {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-section-head .count {
+  color: var(--dim);
+}
+
+/* Sidebar kartlar */
+:root[data-theme="dark"] .vmt-sidebar-promo .vmt-promo-card,
+:root[data-theme="dark"] .vmt-sidebar-promo .vmt-stats-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-stats-row {
+  color: var(--ink-2);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-stats-row .lbl {
+  color: var(--dim);
+}
+
+/* Oyun sayfası */
+:root[data-theme="dark"] .vmt-game-page,
+:root[data-theme="dark"] .vmt-game-info {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-game-title h1 {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-game-desc,
+:root[data-theme="dark"] .vmt-game-inst {
+  color: var(--ink-2);
+}
+:root[data-theme="dark"] .vmt-game-meta {
+  color: var(--dim);
+}
+:root[data-theme="dark"] .vmt-breadcrumb,
+:root[data-theme="dark"] .vmt-breadcrumb a {
+  color: var(--dim);
+}
+:root[data-theme="dark"] .vmt-breadcrumb a:hover {
+  color: var(--blue);
+}
+
+/* Benzer oyunlar listesi */
+:root[data-theme="dark"] .vmt-similar-wrap {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-similar-item {
+  color: var(--ink-2);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-similar-item:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+/* Footer */
+:root[data-theme="dark"] .vmt-footer {
+  background: var(--surface) !important;
+  color: var(--ink-2);
+  border-top-color: var(--line) !important;
+  border-left-color: var(--line) !important;
+  border-right-color: var(--line) !important;
+}
+:root[data-theme="dark"] .vmt-footer a {
+  color: var(--ink-2);
+}
+:root[data-theme="dark"] .vmt-footer a:hover {
+  color: var(--blue);
+}
+:root[data-theme="dark"] .vmt-footer-bottom,
+:root[data-theme="dark"] .vmt-footer-credits {
+  color: var(--dim);
+  border-color: var(--line);
+}
+
+/* Dil / tema dropdown */
+:root[data-theme="dark"] .vmt-lang-current,
+:root[data-theme="dark"] .vmt-theme-toggle {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-lang-dropdown {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-lang-item {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-lang-item:hover {
+  background: var(--surface-2);
+}
+
+/* İçerik sayfaları (About/Privacy/Terms) */
+:root[data-theme="dark"] .vmt-sayfa-icerik {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-sayfa-icerik h1,
+:root[data-theme="dark"] .vmt-sayfa-icerik h2,
+:root[data-theme="dark"] .vmt-sayfa-icerik h3 {
+  color: var(--ink);
+}
+:root[data-theme="dark"] .vmt-sayfa-icerik a {
+  color: var(--blue);
+}
+
+/* Skeleton loader (karanlıkta) */
+:root[data-theme="dark"] .vmt-skeleton-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+:root[data-theme="dark"] .vmt-skeleton-cover,
+:root[data-theme="dark"] .vmt-skeleton-line {
+  background: linear-gradient(90deg, #273449 0%, #334155 50%, #273449 100%);
+}
+
+/* Yukarı çık butonu — zaten gradient, iyi uyum */
+
+/* Boş durum (empty state) */
+:root[data-theme="dark"] .vmt-empty {
+  color: var(--dim);
+}
+
+/* Promo banner — gradient zaten iyi, metinler beyaz */
+
+/* ============================================
+   TEMA TOGGLE BUTONU
+   ============================================ */
+.vmt-theme-toggle {
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  outline: 0;
+  padding: 0;
+  margin-right: 6px;
+}
+.vmt-theme-toggle:hover {
+  transform: scale(1.08);
+  border-color: var(--blue);
+}
+.vmt-theme-toggle .ikon-aydinlik,
+.vmt-theme-toggle .ikon-karanlik {
+  display: block;
+  line-height: 1;
+}
+.vmt-theme-toggle .ikon-karanlik { display: none; }
+:root[data-theme="dark"] .vmt-theme-toggle .ikon-aydinlik { display: none; }
+:root[data-theme="dark"] .vmt-theme-toggle .ikon-karanlik { display: block; }
+
+/* Smooth tema geçişi */
+body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
+.vmt-strip-card, .vmt-sidebar-promo .vmt-promo-card,
+.vmt-sidebar-promo .vmt-stats-card, .vmt-similar-wrap, .vmt-sayfa-icerik,
+.vmt-lang-current, .vmt-theme-toggle, .vmt-lang-dropdown {
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* ============================================
+   HEADER - MOBİL-ÖNCELİKLİ
+   ============================================ */
+.vmt-header {
+  background: rgba(255,255,255,0.96);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 8px;
+  min-height: 56px;
+}
+
+.vmt-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+.vmt-logo-mark {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--orange) 100%);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 18px; font-weight: 900;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.35);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.vmt-logo-mark::before { content: '\25B6'; position: relative; z-index: 2; margin-left: 1px; }
+.vmt-logo-mark::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+  animation: vmt-shine 3s infinite;
+}
+@keyframes vmt-shine {
+  0% { transform: translateX(-100%) skewX(-20deg); }
+  100% { transform: translateX(200%) skewX(-20deg); }
+}
+.vmt-logo-text { display: flex; align-items: baseline; gap: 4px; font-size: 18px; }
+.vmt-logo-text .vu {
+  background: linear-gradient(90deg, var(--blue), var(--blue-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.vmt-logo-text .ma {
+  background: linear-gradient(90deg, var(--orange), var(--orange-2));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.vmt-logo-text .tech { color: var(--ink); }
+.vmt-logo-text .game-badge {
+  font-size: 9px; font-weight: 800; color: white;
+  background: linear-gradient(90deg, var(--orange), var(--pink));
+  padding: 2px 7px; border-radius: 4px;
+  margin-left: 2px; letter-spacing: 1px;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(249,115,22,0.4);
+}
+
+
+/* PARENT SITE LINK - vumatech.net butonu */
+.vmt-parent-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue-light), var(--orange-light));
+  border: 1.5px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+.vmt-parent-link:active { transform: scale(0.96); }
+.vmt-parent-link .icon { font-size: 14px; }
+.vmt-parent-link .text { display: none; }
+.vmt-parent-link:hover {
+  border-color: var(--blue);
+  background: white;
+  color: var(--blue);
+  box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+}
+
+/* SEARCH BUTTON (mobile) - icon only */
+.vmt-search-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+.vmt-search-btn:active { background: var(--blue-light); border-color: var(--blue); }
+
+/* SEARCH OVERLAY (mobile) */
+.vmt-search-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: white;
+  padding: 12px 16px;
+  z-index: 200;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.vmt-search-overlay.active { display: flex; }
+.vmt-search-overlay input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 15px;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-appearance: none;
+}
+.vmt-search-overlay input:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: white;
+}
+.vmt-search-close {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  font-size: 24px;
+  color: var(--ink-2);
+  flex-shrink: 0;
+}
+
+/* LANGUAGE DROPDOWN (mobile) */
+.vmt-lang-wrap { position: relative; flex-shrink: 0; }
+.vmt-lang-current {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  transition: all 0.15s;
+}
+.vmt-lang-current:active { background: var(--blue-light); border-color: var(--blue); }
+
+.vmt-lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 160px;
+  z-index: 99;
+}
+.vmt-lang-dropdown.active { display: flex; }
+.vmt-lang-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: background 0.15s;
+}
+.vmt-lang-item:active, .vmt-lang-item:hover { background: var(--blue-light); }
+.vmt-lang-item.active { background: var(--blue-light); color: var(--blue); }
+.vmt-lang-item .flag { font-size: 20px; }
+
+/* HEADER STAT (only desktop) */
+.vmt-stat {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-2);
+  font-weight: 600;
+  font-size: 13px;
+}
+.vmt-stat .live-dot {
+  width: 8px; height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.2);
+  animation: vmt-pulse 2s infinite;
+}
+@keyframes vmt-pulse { 50% { opacity: 0.5; } }
+
+/* Desktop search (hidden on mobile) */
+.vmt-search-desktop {
+  display: none;
+  flex: 1;
+  max-width: 380px;
+  position: relative;
+}
+.vmt-search-desktop input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--ink);
+  transition: all 0.15s;
+  -webkit-appearance: none;
+}
+.vmt-search-desktop input:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: white;
+  box-shadow: 0 0 0 4px var(--blue-light);
+}
+.vmt-search-desktop::before {
+  content: '\1F50D';
+  position: absolute;
+  left: 12px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* ============================================
+   HERO - MOBİL-ÖNCELİKLİ
+   ============================================ */
+.vmt-hero {
+  padding: 28px 16px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.vmt-hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 100vw; height: 400px;
+  background:
+    radial-gradient(circle at 25% 50%, rgba(37,99,235,0.18), transparent 50%),
+    radial-gradient(circle at 75% 50%, rgba(249,115,22,0.18), transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.vmt-hero-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+
+.vmt-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: white;
+  border: 1.5px solid var(--line);
+  padding: 5px 12px 5px 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--ink-2);
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  font-weight: 600;
+}
+.vmt-hero-tag .emoji {
+  background: linear-gradient(135deg, var(--blue), var(--orange));
+  color: white;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11px;
+}
+.vmt-hero-tag b { color: var(--blue); }
+
+.vmt-hero h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.vmt-hero h1 .accent {
+  background: linear-gradient(120deg, var(--blue) 0%, var(--purple) 50%, var(--orange) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background-size: 200% auto;
+  animation: vmt-gradient 4s linear infinite;
+}
+@keyframes vmt-gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+.vmt-hero p {
+  font-size: 14px;
+  color: var(--ink-2);
+  max-width: 540px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+}
+
+/* HERO STATS - 2x2 grid on mobile */
+.vmt-hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.vmt-hero-stats > div {
+  text-align: center;
+  padding: 12px 10px;
+  background: white;
+}
+.vmt-hero-stats .num {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.vmt-hero-stats .num.blue { color: var(--blue); }
+.vmt-hero-stats .num.orange { color: var(--orange); }
+.vmt-hero-stats .num.green { color: var(--green); }
+.vmt-hero-stats .lbl {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--dim);
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+/* ============================================
+   AD SLOTS
+   ============================================ */
+.vmt-ad-slot { max-width: 1440px; margin: 12px auto; padding: 0 16px; }
+.vmt-ad-box {
+  background: var(--surface);
+  border: 1px dashed var(--line-2);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  color: var(--dim);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  min-height: 80px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ============================================
+   TABS - MOBİL-ÖNCELİKLİ
+   ============================================ */
+.vmt-tabs-wrap {
+  max-width: 1440px;
+  margin: 16px auto 0;
+  padding: 0 16px;
+  position: relative;
+}
+
+/* Sol gradient fade */
+.vmt-tabs-wrap::before {
+  content: '';
+  position: absolute;
+  left: 16px; top: 0; bottom: 8px;
+  width: 60px;
+  background: linear-gradient(90deg, var(--bg) 20%, transparent);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.vmt-tabs-wrap.scrolled-left::before {
+  opacity: 1;
+}
+
+/* Sağ gradient fade */
+.vmt-tabs-wrap::after {
+  content: '';
+  position: absolute;
+  right: 16px; top: 0; bottom: 8px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, var(--bg) 80%);
+  pointer-events: none;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.vmt-tabs-wrap.scrolled-right::after {
+  opacity: 0;
+}
+
+.vmt-tabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 0 4px 8px 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.vmt-tabs::-webkit-scrollbar { display: none; }
+
+/* Kaydırma ok butonları */
+.vmt-tab-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: var(--blue);
+  border: 1.5px solid var(--line);
+  cursor: pointer;
+  z-index: 3;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  outline: 0;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.vmt-tab-arrow:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+.vmt-tab-arrow.prev { left: 4px; }
+.vmt-tab-arrow.next { right: 4px; }
+.vmt-tabs-wrap.can-scroll-left .vmt-tab-arrow.prev {
+  opacity: 1;
+  visibility: visible;
+}
+.vmt-tabs-wrap.can-scroll-right .vmt-tab-arrow.next {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobilde okları gizle, sadece fade göster */
+@media (max-width: 640px) {
+  .vmt-tab-arrow { display: none; }
+}
+
+.vmt-tab {
+  padding: 8px 12px;
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+  white-space: nowrap;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  min-height: 36px;
+}
+.vmt-tab:active { transform: scale(0.96); }
+.vmt-tab.active {
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+}
+.vmt-tab.active.hot {
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  box-shadow: 0 4px 12px rgba(249,115,22,0.3);
+}
+
+/* ============================================
+   CONTENT
+   ============================================ */
+.vmt-main-layout {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.vmt-sidebar-ad { display: none; }
+.vmt-content { padding: 16px 0; min-width: 0; }
+
+.vmt-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 12px 0 14px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.vmt-section-head h2 {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -0.4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+.vmt-section-head h2 .ico {
+  background: linear-gradient(135deg, var(--orange), var(--blue));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.vmt-section-head .count {
+  color: var(--dim);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* FEATURED - mobile: 1 büyük + 2 küçük */
+.vmt-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+.vmt-featured > a:first-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 16/9;
+}
+.vmt-feat-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: var(--surface);
+  aspect-ratio: 1/1;
+  box-shadow: var(--shadow);
+  transition: all 0.25s;
+}
+.vmt-feat-card:active { transform: scale(0.98); }
+.vmt-feat-cover {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.vmt-feat-card:first-child .vmt-feat-cover { font-size: 80px; }
+.vmt-feat-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent);
+  padding: 12px;
+  color: white;
+}
+.vmt-feat-overlay h3 {
+  font-size: 14px;
+  font-weight: 800;
+  margin: 0 0 2px;
+  letter-spacing: -0.2px;
+  color: white;
+}
+.vmt-feat-card:first-child .vmt-feat-overlay h3 { font-size: 20px; }
+.vmt-feat-overlay .meta {
+  font-size: 10px;
+  opacity: 0.85;
+  display: flex;
+  gap: 8px;
+}
+.vmt-feat-card:first-child .vmt-feat-overlay .meta { font-size: 11px; gap: 12px; }
+.vmt-feat-badge {
+  position: absolute;
+  top: 8px; left: 8px;
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(249,115,22,0.4);
+}
+.vmt-feat-card:first-child .vmt-feat-badge {
+  top: 12px; left: 12px;
+  font-size: 10px;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+}
+.vmt-feat-badge.new {
+  background: linear-gradient(135deg, var(--green), #059669);
+  box-shadow: 0 4px 12px rgba(16,185,129,0.4);
+}
+
+/* GRID - mobile: 3 sütun, küçük kartlar */
+.vmt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.vmt-card {
+  background: var(--surface);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  border: 1px solid var(--line);
+}
+.vmt-card:active { transform: scale(0.97); }
+.vmt-card-cover {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.vmt-card-cover::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.3));
+}
+.vmt-card-play {
+  display: none;
+  z-index: 2;
+}
+
+.vmt-card-badge {
+  position: absolute;
+  top: 4px; right: 4px;
+  background: var(--orange);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  z-index: 3;
+}
+.vmt-card-badge.hot { background: var(--red); }
+.vmt-card-badge.new { background: var(--green); }
+.vmt-card-badge.top { background: linear-gradient(135deg, var(--orange), var(--pink)); }
+
+.vmt-card-info { padding: 6px 8px 8px; }
+.vmt-card-info h3 {
+  font-size: 11px;
+  font-weight: 800;
+  margin: 0 0 2px;
+  letter-spacing: -0.1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.vmt-card-info .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--dim);
+  font-weight: 600;
+}
+.vmt-card-info .meta .plays {
+  color: var(--blue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+}
+.vmt-card-info .meta span:first-child {
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 45%;
+}
+
+/* BLOG POST */
+.post-outer-container {
+  background: var(--surface);
+  max-width: 1440px;
+  margin: 16px;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.post-title {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+.post-title a, .post-title a:hover, .post-title a:visited { color: var(--ink); }
+.post-body {
+  color: var(--ink-2);
+  line-height: 1.6;
+  margin: 1em 0;
+  font-size: 15px;
+}
+.post-body iframe { max-width: 100%; border-radius: var(--radius); }
+.post-footer { margin-top: 16px; color: var(--dim); font-size: 13px; }
+.byline { display: inline-block; margin-right: 12px; }
+
+/* COMMENT */
+#comments {
+  max-width: 1440px;
+  margin: 16px;
+  padding: 20px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+#comments h3 { font-size: 16px; font-weight: 800; margin-bottom: 12px; }
+
+/* ============================================
+   FOOTER - MOBİL: tek sütun, kompakt
+   ============================================ */
+.vmt-footer {
+  margin-top: 30px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  padding: 24px 16px 16px;
+}
+.vmt-footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.vmt-footer-section h4 {
+  font-size: 12px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+.vmt-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+.vmt-footer li { margin: 0; }
+.vmt-footer li a {
+  color: var(--ink-2);
+  font-size: 13px;
+  transition: color 0.15s;
+  padding: 4px 0;
+  display: inline-block;
+}
+.vmt-footer li a:active { color: var(--blue); }
+.vmt-footer-about {
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  margin-top: 8px;
+}
+.vmt-footer-credits {
+  text-align: center;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 16px 0 0;
+  background: rgba(248, 250, 252, 0.5);
+}
+.vmt-footer-credits p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--dim);
+  line-height: 1.6;
+}
+.vmt-footer-credits a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.vmt-footer-credits a:hover { text-decoration: underline; }
+.vmt-footer-bottom a {
+  color: var(--ink-2);
+  text-decoration: none;
+  margin: 0 2px;
+}
+.vmt-footer-bottom a:hover { color: var(--blue); }
+
+.vmt-footer-bottom {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--dim);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+
+/* ============================================
+   ŞIK YÜKLEME EKRANI
+   ============================================ */
+.vmt-splash {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1e3a8a 100%);
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.vmt-splash.aktif {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.vmt-splash.fadeout {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Arkaplan animasyonu - dönen parıltılar */
+.vmt-splash::before, .vmt-splash::after {
+  content: '';
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: vmt-splash-blob 8s ease-in-out infinite;
+}
+.vmt-splash::before {
+  background: #2563eb;
+  top: -200px; left: -200px;
+}
+.vmt-splash::after {
+  background: #f97316;
+  bottom: -200px; right: -200px;
+  animation-delay: 4s;
+}
+@keyframes vmt-splash-blob {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(100px, 50px) scale(1.2); }
+}
+
+/* Logo */
+.vmt-splash-logo {
+  width: 110px; height: 110px;
+  background: linear-gradient(135deg, #2563eb 0%, #f97316 100%);
+  border-radius: 28px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(37,99,235,0.5), 0 0 0 1px rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+  animation: vmt-splash-logo 2s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes vmt-splash-logo {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+.vmt-splash-logo::before {
+  content: '';
+  border-style: solid;
+  border-width: 22px 0 22px 36px;
+  border-color: transparent transparent transparent white;
+  margin-left: 8px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+.vmt-splash-logo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+  animation: vmt-shine 2s infinite;
+}
+
+/* Marka ismi */
+.vmt-splash-brand {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  z-index: 2;
+}
+.vmt-splash-brand .vu {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.vmt-splash-brand .ma {
+  background: linear-gradient(90deg, #fb923c, #f97316);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.vmt-splash-brand .tech { color: white; }
+.vmt-splash-brand .badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(90deg, #f97316, #ec4899);
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-left: 4px;
+  letter-spacing: 2px;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(249,115,22,0.5);
+}
+
+/* Mesaj */
+.vmt-splash-msg {
+  color: #cbd5e1;
+  font-size: 15px;
+  margin-bottom: 32px;
+  text-align: center;
+  z-index: 2;
+  font-weight: 500;
+}
+
+/* Yükleme çubuğu */
+.vmt-splash-bar {
+  width: 260px;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  z-index: 2;
+}
+.vmt-splash-bar-fill {
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, #2563eb, #f97316);
+  border-radius: 2px;
+  animation: vmt-splash-bar 1.5s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(37,99,235,0.6);
+}
+@keyframes vmt-splash-bar {
+  0% { transform: translateX(-100%); width: 30%; }
+  50% { width: 60%; }
+  100% { transform: translateX(350%); width: 30%; }
+}
+
+/* Joystick icon animasyonu */
+.vmt-splash-emojis {
+  display: flex;
+  gap: 16px;
+  font-size: 24px;
+  z-index: 2;
+  opacity: 0.7;
+}
+.vmt-splash-emojis span {
+  animation: vmt-splash-bounce 1.5s ease-in-out infinite;
+}
+.vmt-splash-emojis span:nth-child(1) { animation-delay: 0s; }
+.vmt-splash-emojis span:nth-child(2) { animation-delay: 0.2s; }
+.vmt-splash-emojis span:nth-child(3) { animation-delay: 0.4s; }
+.vmt-splash-emojis span:nth-child(4) { animation-delay: 0.6s; }
+.vmt-splash-emojis span:nth-child(5) { animation-delay: 0.8s; }
+@keyframes vmt-splash-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* SKELETON KARTLAR - oyun grid yükleniyor */
+.vmt-skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+.vmt-skeleton-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.vmt-skeleton-cover {
+  aspect-ratio: 1/1;
+  background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+  background-size: 200% 100%;
+  animation: vmt-skeleton 1.5s ease-in-out infinite;
+}
+.vmt-skeleton-info {
+  padding: 8px;
+}
+.vmt-skeleton-line {
+  height: 10px;
+  background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+  background-size: 200% 100%;
+  animation: vmt-skeleton 1.5s ease-in-out infinite;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+.vmt-skeleton-line.short { width: 60%; }
+@keyframes vmt-skeleton {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (min-width: 640px) {
+  .vmt-skeleton-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 0 24px;
+  }
+}
+
+/* ============================================
+   DİNAMİK SİSTEM CSS
+   ============================================ */
+
+/* ============================================
+   İÇERİK SAYFALARI (About, Privacy, Terms)
+   ============================================ */
+.vmt-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+.vmt-page > * { background: white; }
+.vmt-page h1 {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 20px;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+  padding: 24px 24px 0;
+}
+.vmt-page > h1:first-child {
+  background: white;
+  border-radius: var(--radius) var(--radius) 0 0;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+}
+.vmt-page-lead {
+  color: var(--dim);
+  font-size: 14px;
+  padding: 0 24px 16px;
+  margin: 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-bottom: 0;
+}
+.vmt-page h2 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  padding: 24px 24px 10px;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+  background: white;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.vmt-page h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  padding: 12px 24px 6px;
+  color: var(--ink);
+  background: white;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.vmt-page p {
+  margin: 0;
+  padding: 4px 24px 14px;
+  color: var(--ink-2);
+  background: white;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.vmt-page ul {
+  margin: 0;
+  padding: 0 24px 14px 44px;
+  background: white;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.vmt-page li {
+  margin-bottom: 8px;
+  padding: 0;
+  color: var(--ink-2);
+}
+.vmt-page a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.vmt-page a:hover { text-decoration: underline; }
+.vmt-page strong { color: var(--ink); font-weight: 700; }
+.vmt-page-back-wrap {
+  background: white;
+  padding: 20px 24px 24px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* About sayfası özel hero */
+.vmt-page-hero {
+  background: linear-gradient(135deg, var(--blue), var(--orange)) !important;
+  border-radius: var(--radius) var(--radius) 0 0;
+  padding: 32px 24px !important;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+.vmt-page-hero h1 {
+  color: white !important;
+  font-size: 32px !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+.vmt-page-hero p {
+  color: white !important;
+  opacity: 0.95;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 16px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.vmt-page-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 16px 24px;
+  background: white;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+.vmt-page-stat {
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 8px;
+}
+.vmt-page-stat .num {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--blue);
+}
+.vmt-page-stat .lbl {
+  font-size: 12px;
+  color: var(--dim);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+@media (min-width: 640px) {
+  .vmt-page { padding: 24px; }
+  .vmt-page h1 { font-size: 32px; padding: 28px 32px 0; }
+  .vmt-page h2 { padding: 28px 32px 12px; }
+  .vmt-page p, .vmt-page h3, .vmt-page-lead { padding-left: 32px; padding-right: 32px; }
+  .vmt-page-back-wrap { padding: 24px 32px 32px; }
+  .vmt-page-stats { grid-template-columns: repeat(4, 1fr); padding: 20px 32px; }
+}
+
+
+/* ============================================
+   PROMO BANNER'LAR (Reklam alanları yerine)
+   ============================================ */
+.vmt-promo-banner {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 50%, #f97316 100%);
+  border-radius: 16px;
+  padding: 18px;
+  margin: 8px 0 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+}
+.vmt-promo-banner::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.vmt-promo-banner::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -30px;
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.vmt-promo-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.vmt-promo-text { flex: 1; min-width: 200px; }
+.vmt-promo-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  backdrop-filter: blur(4px);
+}
+.vmt-promo-text h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+}
+.vmt-promo-text p {
+  color: rgba(255,255,255,0.92);
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 500px;
+}
+.vmt-promo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: white;
+  color: #2563eb;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.vmt-promo-btn:hover, .vmt-promo-btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Yan kenar promo kartı */
+.vmt-promo-card {
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  border-radius: 14px;
+  padding: 18px 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+  position: relative;
+  overflow: hidden;
+}
+.vmt-promo-card::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 120px; height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.vmt-promo-card-ico {
+  font-size: 32px;
+  margin-bottom: 6px;
+  position: relative;
+}
+.vmt-promo-card h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+  position: relative;
+}
+.vmt-promo-card p {
+  color: rgba(255,255,255,0.95);
+  font-size: 12px;
+  margin: 0 0 12px;
+  line-height: 1.4;
+  position: relative;
+}
+.vmt-promo-card-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: white;
+  color: #2563eb;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: relative;
+}
+.vmt-promo-card-btn:hover { background: var(--bg); }
+
+/* Stats kart (yan kenar) */
+.vmt-stats-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+}
+.vmt-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+.vmt-stats-row:last-child { border-bottom: 0; }
+.vmt-stats-row .ico {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.vmt-stats-row .num {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.3px;
+}
+.vmt-stats-row .lbl {
+  font-size: 11px;
+  color: var(--dim);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .vmt-promo-inner { flex-direction: column; align-items: stretch; }
+  .vmt-promo-btn { justify-content: center; text-align: center; }
+  .vmt-promo-text h3 { font-size: 16px; }
+}
+
+
+.vmt-dynamic-app { min-height: 60vh; }
+
+
+/* CANLI ONLINE NOKTA - Pulse animasyonu */
+.vmt-live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  animation: vmt-pulse 2s ease-in-out infinite;
+}
+.vmt-live-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: #10b981;
+  opacity: 0.5;
+  animation: vmt-pulse-ring 2s ease-in-out infinite;
+}
+@keyframes vmt-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+@keyframes vmt-pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* Online sayı vurgusu */
+.vmt-online-sayi {
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s;
+}
+
+.vmt-loading, .vmt-loading-big {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--dim);
+}
+.vmt-loading-big { padding: 80px 20px; }
+.vmt-loading-big p { margin-top: 16px; font-size: 15px; }
+.vmt-loading-sm {
+  text-align: center;
+  padding: 20px;
+  color: var(--dim);
+  font-size: 12px;
+}
+
+.vmt-spinner {
+  width: 48px; height: 48px;
+  border: 4px solid var(--line);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: vmt-spin 0.8s linear infinite;
+}
+@keyframes vmt-spin {
+  to { transform: rotate(360deg); }
+}
+
+.vmt-error, .vmt-error-big {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--ink-2);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 20px 0;
+}
+.vmt-error-big { padding: 60px 20px; }
+.vmt-btn-retry {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.vmt-no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--dim);
+}
+.vmt-no-results-icon { font-size: 48px; margin-bottom: 12px; }
+.vmt-no-results-title { font-weight: 600; color: var(--ink-2); font-size: 16px; }
+.vmt-no-results-sub { font-size: 13px; }
+
+/* FEATURED & GRID kapak görselleri için */
+.vmt-feat-cover, .vmt-card-cover {
+  position: relative;
+  background-color: #1e293b;
+  overflow: hidden;
+  width: 100%;
+}
+.vmt-feat-cover img, .vmt-card-cover img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  border: 0 !important;
+  z-index: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.vmt-feat-cover { aspect-ratio: 16/9; min-height: 180px; }
+.vmt-feat-card:first-child .vmt-feat-cover { aspect-ratio: 16/10; min-height: 300px; }
+.vmt-card-cover { aspect-ratio: 1/1; min-height: 100px; }
+.vmt-feat-tint {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0) 40%,
+    rgba(0,0,0,0.4) 75%,
+    rgba(0,0,0,0.85) 100%);
+}
+.vmt-card-tint {
+  display: none;
+}
+.vmt-feat-overlay { z-index: 2; position: absolute; bottom: 0; left: 0; right: 0; }
+.vmt-card-info { z-index: 2; position: relative; background: white; }
+.vmt-card-cover { color: transparent; }
+.vmt-feat-cover { color: transparent; }
+
+/* OYUN SAYFASI */
+.vmt-game-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.vmt-game-bc {
+  font-size: 12px;
+  color: var(--dim);
+  margin-bottom: 12px;
+}
+.vmt-game-bc a {
+  color: var(--blue);
+  font-weight: 600;
+}
+.vmt-game-bc a:hover { text-decoration: underline; }
+
+.vmt-game-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+
+.vmt-game-main { 
+  min-width: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden;
+}
+.vmt-game-frame-wrap {
+  width: 100%;
+  max-width: 100%;
+}
+
+.vmt-game-title h1 {
+  font-size: 22px;
+  font-weight: 900;
+  margin: 0 0 8px;
+  color: var(--ink);
+  letter-spacing: -0.5px;
+}
+.vmt-game-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.vmt-game-frame-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #000;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.vmt-game-cover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #1e293b;
+}
+
+.vmt-game-cover-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.vmt-game-cover-tint {
+  position: absolute; inset: 0;
+  z-index: 1;
+}
+.vmt-play-big {
+  width: 80px; height: 80px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  font-size: 32px;
+  color: var(--blue);
+  cursor: pointer;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  z-index: 2;
+  transition: transform 0.2s;
+}
+.vmt-play-big:hover, .vmt-play-big:active { transform: scale(1.1); }
+.vmt-cover-text {
+  position: absolute;
+  bottom: 16px; left: 16px; right: 16px;
+  color: white;
+  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.vmt-cover-text h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+.vmt-cover-text p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+.vmt-game-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.vmt-game-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.vmt-btn {
+  padding: 10px 16px;
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: all 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.vmt-btn:hover, .vmt-btn:active {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-light);
+}
+.vmt-btn.primary {
+  background: linear-gradient(135deg, var(--blue), var(--blue-2));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+}
+.vmt-btn.primary:hover, .vmt-btn.primary:active {
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  box-shadow: 0 4px 14px rgba(249,115,22,0.4);
+}
+
+.vmt-game-info {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-top: 16px;
+}
+.vmt-game-info h3 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+.vmt-game-info h3:not(:first-child) { margin-top: 16px; }
+.vmt-game-info p {
+  color: var(--ink-2);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.vmt-game-tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.vmt-tag {
+  padding: 4px 10px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-2);
+}
+
+.vmt-sidebar-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.vmt-similar {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.vmt-similar h3 {
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--ink);
+}
+.vmt-similar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.vmt-similar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+.vmt-similar-item:hover, .vmt-similar-item:active { background: var(--blue-light); }
+.vmt-similar-cover {
+  width: 50px; height: 50px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: #1e293b;
+  overflow: hidden;
+  position: relative;
+}
+.vmt-similar-cover img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.vmt-similar-info { min-width: 0; flex: 1; }
+.vmt-similar-info h4 {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.vmt-similar-info p {
+  font-size: 10px;
+  margin: 2px 0 0;
+  color: var(--dim);
+}
+
+.vmt-ad-300 { min-height: 250px; }
+
+/* OYUN SAYFASI - GRID YAPISI */
+.vmt-game-layout {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 16px;
+}
+.vmt-sidebar-game-left {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .vmt-game-layout {
+    grid-template-columns: 200px minmax(0, 1fr) 280px !important;
+    gap: 20px !important;
+  }
+  .vmt-sidebar-game-left {
+    display: block !important;
+  }
+  .vmt-game-page { padding: 16px 24px; }
+  .vmt-game-title h1 { font-size: 28px; }
+}
+
+@media (min-width: 1200px) {
+  .vmt-game-layout {
+    grid-template-columns: 220px minmax(0, 1fr) 300px !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 899px) {
+  .vmt-game-layout > .vmt-sidebar-ad { display: none; }
+  .vmt-sidebar-side {
+    flex-direction: column;
+  }
+}
+
+/* Attribution - tamamen gizli */
+.Attribution { display: none !important; }
+.widget.Attribution { display: none !important; }
+#footer_attribution { display: none !important; }
+.blogger { display: none !important; }
+.widget-content .blogger { display: none !important; }
+
+/* ============================================
+   TABLET (640px+)
+   ============================================ */
+@media (min-width: 640px) {
+  .vmt-header { padding: 12px 24px; min-height: 64px; }
+  .vmt-logo-mark { width: 42px; height: 42px; font-size: 20px; border-radius: 12px; }
+  .vmt-logo-text { font-size: 22px; }
+  .vmt-logo-text .game-badge { font-size: 10px; padding: 3px 9px; letter-spacing: 1.5px; }
+
+  .vmt-hero { padding: 50px 24px 30px; }
+  .vmt-hero-tag { font-size: 13px; padding: 6px 14px 6px 8px; margin-bottom: 24px; }
+  .vmt-hero-tag .emoji { width: 22px; height: 22px; font-size: 12px; }
+  .vmt-hero h1 { font-size: 42px; margin-bottom: 18px; }
+  .vmt-hero p { font-size: 16px; margin-bottom: 28px; }
+  .vmt-hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: none;
+    width: auto;
+    display: inline-grid;
+  }
+  .vmt-hero-stats > div { padding: 14px 24px; }
+  .vmt-hero-stats .num { font-size: 22px; }
+  .vmt-hero-stats .lbl { font-size: 11px; }
+
+  .vmt-tabs-wrap { padding: 0 24px; margin-top: 20px; }
+  .vmt-tab { padding: 9px 16px; font-size: 13px; gap: 6px; }
+
+  .vmt-parent-link { padding: 0 14px; font-size: 13px; }
+  .vmt-parent-link .text { display: inline; }
+
+  .vmt-main-layout { padding: 0 24px; }
+  .vmt-section-head h2 { font-size: 22px; }
+  .vmt-section-head .count { font-size: 13px; }
+
+  .vmt-featured {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .vmt-featured > a:first-child {
+    grid-column: 1;
+    aspect-ratio: 16/10;
+  }
+  .vmt-feat-card { aspect-ratio: 16/10; }
+  .vmt-feat-cover { font-size: 70px; }
+  .vmt-feat-card:first-child .vmt-feat-cover { font-size: 90px; }
+  .vmt-feat-overlay { padding: 16px; }
+  .vmt-feat-overlay h3 { font-size: 18px; }
+  .vmt-feat-card:first-child .vmt-feat-overlay h3 { font-size: 26px; }
+
+  .vmt-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  .vmt-card { border-radius: 12px; }
+  .vmt-card-cover { aspect-ratio: 4/3; font-size: 44px; }
+  .vmt-card-info { padding: 10px 12px 12px; }
+  .vmt-card-info h3 { font-size: 13px; }
+  .vmt-card-info .meta { font-size: 10px; }
+
+  .vmt-footer-inner { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 30px; }
+  .vmt-footer ul { display: block; }
+  .vmt-footer li { margin-bottom: 6px; }
+  .vmt-footer-credits {
+  text-align: center;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin: 16px 0 0;
+  background: rgba(248, 250, 252, 0.5);
+}
+.vmt-footer-credits p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--dim);
+  line-height: 1.6;
+}
+.vmt-footer-credits a {
+  color: var(--blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+.vmt-footer-credits a:hover { text-decoration: underline; }
+.vmt-footer-bottom a {
+  color: var(--ink-2);
+  text-decoration: none;
+  margin: 0 2px;
+}
+.vmt-footer-bottom a:hover { color: var(--blue); }
+
+.vmt-footer-bottom { flex-direction: row; justify-content: space-between; }
+}
+
+/* ============================================
+   DESKTOP (900px+)
+   ============================================ */
+@media (min-width: 900px) {
+  .vmt-search-btn { display: none; }
+  .vmt-search-desktop { display: block; }
+  .vmt-stat { display: flex; }
+
+  .vmt-header { gap: 16px; }
+
+  .vmt-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+  .vmt-card-cover { font-size: 50px; }
+  .vmt-card-play {
+    display: flex;
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center; justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 2;
+  }
+  .vmt-card:hover .vmt-card-play { opacity: 1; }
+  .vmt-card-play-btn {
+    background: white;
+    color: var(--blue);
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    transform: scale(0.8);
+    transition: transform 0.2s;
+  }
+  .vmt-card:hover .vmt-card-play-btn { transform: scale(1); }
+  .vmt-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+  .vmt-card-info h3 { font-size: 14px; }
+  .vmt-card-badge { top: 8px; right: 8px; padding: 3px 8px; font-size: 10px; }
+}
+
+/* ============================================
+   LARGE DESKTOP (1100px+) - sidebar reklamlar
+   ============================================ */
+@media (min-width: 1100px) {
+  .vmt-main-layout {
+    display: grid;
+    grid-template-columns: 160px 1fr 160px;
+    gap: 20px;
+  }
+  .vmt-sidebar-ad {
+    display: block;
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+  }
+  .vmt-sidebar-ad .vmt-ad-box { min-height: 600px; flex-direction: column; }
+}
+
+/* LAYOUT MODU */
+body#layout .hidden, body#layout .invisible { display: inherit; }
+body#layout .vmt-header, body#layout .vmt-hero, body#layout .vmt-tabs-wrap,
+body#layout .vmt-content, body#layout .vmt-footer { display: block; }
+
+/* "Daha fazla yükle" butonu - SÜPER DIKKAT ÇEKİCİ */
+.vmt-load-more-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 16px 24px;
+  position: relative;
+  margin-top: 20px;
+}
+.vmt-load-more-wrap::before {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line) 20%, var(--line) 80%, transparent);
+  z-index: 0;
+}
+.vmt-load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 35%, #db2777 70%, #f97316 100%);
+  background-size: 300% 300%;
+  color: white;
+  border: 0;
+  border-radius: 999px;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(37,99,235,0.4), inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  letter-spacing: -0.3px;
+  position: relative;
+  z-index: 1;
+  animation: vmt-mega-pulse 2.4s ease-in-out infinite, vmt-gradient-flow 6s ease infinite;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  outline: 0;
+}
+.vmt-load-more::before {
+  content: '\25BC';
+  display: inline-block;
+  font-size: 14px;
+  animation: vmt-bounce-down 1.2s ease-in-out infinite;
+}
+.vmt-load-more::after {
+  content: '\25BC';
+  display: inline-block;
+  font-size: 14px;
+  animation: vmt-bounce-down 1.2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+.vmt-load-more:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 16px 40px rgba(37,99,235,0.55), 0 0 0 6px rgba(249,115,22,0.15);
+  animation: vmt-gradient-flow 2s ease infinite;
+}
+.vmt-load-more:active {
+  transform: translateY(-1px) scale(1.02);
+}
+@keyframes vmt-mega-pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(37,99,235,0.4), 0 0 0 0 rgba(124,58,237,0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(37,99,235,0.4), 0 0 0 18px rgba(124,58,237,0), inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+}
+@keyframes vmt-gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes vmt-bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+.vmt-empty {
+  grid-column: 1 / -1;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--dim);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* ============================================
+   GLOBAL MAKS. GENİŞLİK SINIRI (1440px)
+   Bu ana sınırdır - tüm sayfa buna uyar
+   ============================================ */
+
+body, html {
+  overflow-x: hidden;
+}
+
+/* HEADER - kendisi max-width + margin auto ile ortalansın */
+.vmt-header {
+  max-width: 1440px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+/* Ana içerik zaten wrapper ile centerlanmış olabilir */
+.vmt-main-layout {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Hero (karşılama) */
+.vmt-hero {
+  max-width: 1440px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Featured section */
+.vmt-featured,
+.vmt-grid,
+.vmt-section-head {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ana app wrapper */
+#vmt-app {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Promo banner (mavi/turuncu) */
+.vmt-promo-banner {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Footer */
+.vmt-footer {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.vmt-footer-credits,
+.vmt-footer-bottom,
+.vmt-footer-inner {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Breadcrumb ve oyun sayfası */
+.vmt-breadcrumb,
+.vmt-game-page,
+.vmt-game-layout {
+  max-width: 1440px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Body arka planı - dış boşluk için */
+body {
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9);
+}
+
+
+/* ====================================
+   YUKARI ÇIK BUTONU
+   ==================================== */
+.vmt-scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #f97316);
+  color: white;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.4), 0 0 0 0 rgba(37,99,235,0.5);
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(80px) scale(0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s, box-shadow 0.3s;
+  outline: 0;
+}
+.vmt-scroll-top:hover {
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 12px 32px rgba(37,99,235,0.5);
+}
+.vmt-scroll-top:active {
+  transform: translateY(-2px) scale(1.05);
+}
+.vmt-scroll-top.visible {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  visibility: visible;
+  animation: vmt-scroll-pulse 2.5s ease-in-out infinite;
+}
+@keyframes vmt-scroll-pulse {
+  0%, 100% {
+    box-shadow: 0 8px 24px rgba(37,99,235,0.4), 0 0 0 0 rgba(37,99,235,0.4);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(37,99,235,0.4), 0 0 0 10px rgba(37,99,235,0);
+  }
+}
+.vmt-scroll-top span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .vmt-scroll-top {
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ====================================
+   YATAY STRIP (Netflix-style) - Populer/Favori/Son Oynanan
+   ==================================== */
+.vmt-strip-wrap {
+  margin: 24px 0;
+}
+.vmt-strip-container {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 0;
+}
+.vmt-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 4px 8px;
+  scroll-snap-type: x mandatory;
+}
+.vmt-strip::-webkit-scrollbar {
+  display: none;
+}
+.vmt-strip-card {
+  flex: 0 0 auto;
+  width: 180px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s;
+  scroll-snap-align: start;
+}
+.vmt-strip-card:hover {
+  transform: translateY(-4px);
+}
+.vmt-strip-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f1f5f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.vmt-strip-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.vmt-strip-card:hover .vmt-strip-img img {
+  transform: scale(1.06);
+}
+.vmt-strip-title {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  min-height: 34px;
+  line-height: 1.3;
+}
+.vmt-strip-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  color: var(--blue);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  z-index: 5;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  outline: 0;
+  line-height: 1;
+}
+.vmt-strip-nav:hover {
+  background: var(--blue);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+.vmt-strip-nav.prev { left: 0; }
+.vmt-strip-nav.next { right: 0; }
+
+/* Mobilde nav butonlarini gizle - sag/sol kaydirma yeterli */
+@media (max-width: 640px) {
+  .vmt-strip-nav { display: none; }
+  .vmt-strip-card { width: 140px; }
+}
+
+/* Favori butonu (kart uzerinde) */
+.vmt-fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  color: #cbd5e1;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  outline: 0;
+  padding: 0;
+  line-height: 1;
+  z-index: 2;
+}
+.vmt-fav-btn:hover {
+  transform: scale(1.15);
+  color: #fbbf24;
+  background: rgba(0,0,0,0.7);
+}
+.vmt-fav-btn.active {
+  color: #fbbf24;
+  background: rgba(251,191,36,0.15);
+  text-shadow: 0 0 8px rgba(251,191,36,0.5);
+}
+
+/* Buyuk favori butonu (oyun sayfasi) */
+.vmt-fav-btn-large {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.05);
+  color: #94a3b8;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.2s;
+  outline: 0;
+  padding: 0;
+  line-height: 1;
+  margin-left: 12px;
+}
+.vmt-fav-btn-large:hover {
+  transform: scale(1.1);
+  color: #fbbf24;
+  border-color: #fbbf24;
+}
+.vmt-fav-btn-large.active {
+  color: #fbbf24;
+  background: rgba(251,191,36,0.15);
+  border-color: #fbbf24;
+  text-shadow: 0 0 12px rgba(251,191,36,0.6);
+}
+
+

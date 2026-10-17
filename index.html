@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="theme-color" content="#2563eb">
+  <title>VuMaTech Game — Ücretsiz HTML5 Oyunlar</title>
+  <meta name="description" content="Tarayıcında ücretsiz oyna. 36.000+ aksiyon, yarış, bulmaca ve daha fazlası. Kayıt gerekmez, anında oyna.">
+  <meta name="keywords" content="ücretsiz oyun, html5 oyun, tarayıcı oyun, online oyun, aksiyon, yarış, bulmaca">
+  <meta name="author" content="VuMaTech">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VuMaTech Game">
+  <meta property="og:title" content="VuMaTech Game — Ücretsiz HTML5 Oyunlar">
+  <meta property="og:description" content="36.000+ ücretsiz oyun. Kayıt gerekmez, anında oyna.">
+  <meta property="og:url" content="https://game.vumatech.net/">
+  <meta property="og:image" content="https://game.vumatech.net/favicon.svg">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VuMaTech Game — Ücretsiz HTML5 Oyunlar">
+  <meta name="twitter:description" content="36.000+ ücretsiz oyun. Kayıt gerekmez, anında oyna.">
+  <meta name="twitter:image" content="https://game.vumatech.net/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://game.vumatech.net/">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://img.gamemonetize.com">
+  <link rel="preconnect" href="https://vumatech-proxy.vuraloglu.workers.dev">
+  <link rel="dns-prefetch" href="https://html5.gamemonetize.co">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VuMaTech Game",
+    "url": "https://game.vumatech.net/",
+    "description": "36.000+ ücretsiz HTML5 oyun. Kayıt gerekmez, anında oyna.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://game.vumatech.net/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Erken tema kurulumu (FOUC önleme) -->
+  <script>
+    (function(){
+      try {
+        var t = localStorage.getItem('vmt-tema');
+        if (!t) {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch(e){}
+    })();
+  </script>
+
+  <!-- Stil -->
+  <link rel="stylesheet" href="/assets/style.css?v=14.0">
+</head>
+<body>
+
+<!-- ŞIK YÜKLEME EKRANI (splash) -->
+<div class='vmt-splash' id='vmt-splash'>
+  <div class='vmt-splash-logo'></div>
+  <div class='vmt-splash-brand'>
+    <span class='vu'>Vu</span><span class='ma'>Ma</span><span class='tech'>Tech</span>
+    <span class='badge'>GAME</span>
+  </div>
+  <div class='vmt-splash-msg' id='vmt-splash-msg'>Loading awesome games...</div>
+  <div class='vmt-splash-bar'><div class='vmt-splash-bar-fill'></div></div>
+  <div class='vmt-splash-emojis'>
+    <span>🎮</span>
+    <span>🏎️</span>
+    <span>⚽</span>
+    <span>🧩</span>
+    <span>🚀</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class='vmt-header'>
+  <a class='vmt-logo' href="/" onclick='return window.vmtGoHome ? vmtGoHome(event) : true;'>
+    <div class='vmt-logo-mark'></div>
+    <div class='vmt-logo-text'>
+      <span class='vu'>Vu</span><span class='ma'>Ma</span><span class='tech'>Tech</span>
+      <span class='game-badge'>GAME</span>
+    </div>
+  </a>
+
+  <div class='vmt-search-desktop'>
+    <input type='text' id='vmt-search-input-desktop' placeholder='Search games...'/>
+  </div>
+
+  <div class='vmt-stat'>
+    <span class='live-dot'></span>
+    <span><b class='vmt-online-sayi'>2.8K</b> <span data-i18n='online'>online</span></span>
+  </div>
+
+  <a class='vmt-parent-link' href='https://vumatech.net' target='_blank' rel='noopener' title='VuMaTech.net - Web Design'>
+    <span class='icon'>🌐</span>
+    <span class='text'>VuMaTech.net</span>
+  </a>
+
+  <button class='vmt-search-btn' id='vmt-search-toggle' aria-label='Search'>🔍</button>
+
+  <button class='vmt-theme-toggle' id='vmt-theme-toggle' aria-label='Tema değiştir' title='Tema'>
+    <span class='ikon-aydinlik'>&#9728;</span><span class='ikon-karanlik'>&#9789;</span>
+  </button>
+
+  <div class='vmt-lang-wrap'>
+    <button class='vmt-lang-current' id='vmt-lang-toggle' aria-label='Language'>🇰🇬</button>
+    <div class='vmt-lang-dropdown' id='vmt-lang-dropdown'>
+      <button class='vmt-lang-item' data-lang='ky'><span class='flag'>🇰🇬</span> Кыргызча</button>
+      <button class='vmt-lang-item' data-lang='ru'><span class='flag'>🇷🇺</span> Русский</button>
+      <button class='vmt-lang-item' data-lang='tr'><span class='flag'>🇹🇷</span> Türkçe</button>
+      <button class='vmt-lang-item' data-lang='en'><span class='flag'>🇬🇧</span> English</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- SEARCH OVERLAY (mobile) -->
+<div class='vmt-search-overlay' id='vmt-search-overlay'>
+  <input type='text' id='vmt-search-input' placeholder='Search games...'/>
+  <button class='vmt-search-close' id='vmt-search-close' aria-label='Close'>✕</button>
+</div>
+
+<!-- YUKARI ÇIK BUTONU -->
+<button id='vmt-scroll-top' class='vmt-scroll-top' aria-label='Yukarı çık' title='Başa dön'>
+  <span>&#8593;</span>
+</button>
+
+<!-- ANA SAYFA - Dinamik içerik buraya yüklenir -->
+<div id='vmt-app' class='vmt-dynamic-app'>
+  <div class='vmt-skeleton-grid'>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+    <div class='vmt-skeleton-card'><div class='vmt-skeleton-cover'></div><div class='vmt-skeleton-info'><div class='vmt-skeleton-line'></div><div class='vmt-skeleton-line short'></div></div></div>
+  </div>
+</div>
+
+<!-- Blog widget - gerekli ama gizli -->
+<div style='display:none !important;'>
+<b:if cond='data:view.isSingleItem'>
+
+</b:if>
+</div>
+
+<!-- FOOTER -->
+<footer class='vmt-footer'>
+  <div class='vmt-footer-inner'>
+    <div class='vmt-footer-section'>
+      <div class='vmt-logo' style='margin-bottom: 8px;'>
+        <div class='vmt-logo-mark'></div>
+        <div class='vmt-logo-text' style='font-size: 18px;'>
+          <span class='vu'>Vu</span><span class='ma'>Ma</span><span class='tech'>Tech</span>
+          <span class='game-badge'>GAME</span>
+        </div>
+      </div>
+      <p class='vmt-footer-about' data-i18n='footerAbout'></p>
+    </div>
+    <div class='vmt-footer-section'>
+      <h4 data-i18n='footerCategories'>Categories</h4>
+      <ul>
+        <li><a href='/?cat=aksiyon' onclick='return vmtGotoCat("aksiyon", event)' data-i18n='catAction'>Action</a></li>
+        <li><a href='/?cat=yaris' onclick='return vmtGotoCat("yaris", event)' data-i18n='catRacing'>Racing</a></li>
+        <li><a href='/?cat=bulmaca' onclick='return vmtGotoCat("bulmaca", event)' data-i18n='catPuzzle'>Puzzle</a></li>
+        <li><a href='/?cat=spor' onclick='return vmtGotoCat("spor", event)' data-i18n='catSports'>Sports</a></li>
+        <li><a href='/?cat=trend' onclick='return vmtGotoCat("trend", event)' data-i18n='catTrend'>Trend</a></li>
+        <li><a href='/?cat=2kisilik' onclick='return vmtGotoCat("2kisilik", event)' data-i18n='cat2P'>2 Player</a></li>
+      </ul>
+    </div>
+    <div class='vmt-footer-section'>
+      <h4 data-i18n='footerInfo'>Info</h4>
+      <ul>
+        <li><a href='?page=about' onclick='return vmtGotoPage("about", event)' data-i18n='footerAboutUs'>About</a></li>
+        <li><a href='https://t.me/vumatech' onclick='return vmtTelegramAc(event)' data-i18n='footerContact'>Telegram</a></li>
+        <li><a href='?page=privacy' onclick='return vmtGotoPage("privacy", event)' data-i18n='footerPrivacy'>Privacy</a></li>
+        <li><a href='?page=terms' onclick='return vmtGotoPage("terms", event)' data-i18n='footerTerms'>Terms</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class='vmt-footer-credits'>
+    <p>
+      <span data-i18n='gamesProvidedBy'>Games provided by</span>
+      <a href='https://gamemonetize.com' target='_blank' rel='noopener'>GameMonetize.com</a>
+      ·
+      <span data-i18n='gamesRights'>All games property of their respective developers</span>
+    </p>
+  </div>
+  <div class='vmt-footer-bottom'>
+    <div>© 2026 VuMaTech Game · <a href='https://vumatech.net' target='_blank' rel='noopener'>vumatech.net</a></div>
+    <div>
+      <a href='?page=privacy' onclick='return vmtGotoPage("privacy", event)' data-i18n='footerPrivacy'>Privacy</a>
+      ·
+      <a href='?page=terms' onclick='return vmtGotoPage("terms", event)' data-i18n='footerTerms'>Terms</a>
+      ·
+      <span data-i18n='footerTagline'>All games HTML5, mobile friendly</span>
+    </div>
+  </div>
+
+  <div style='display:none !important; visibility:hidden !important; height:0 !important; overflow:hidden !important; position:absolute !important; left:-9999px !important;'>
+  
+  </div>
+</footer>
+
+<b:template-script async='true' name='indie' version='1.0.0'/>
+
+<!-- Uygulama -->
+<script src="/assets/app.js?v=14.0" defer></script>
+</body>
+</html>
