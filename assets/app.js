@@ -55,7 +55,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       adArea:'Жарнама аймагы', adSide:'Жарнама<br>(Капталда)',
       footerAbout:'Кыргызстандын эң тез браузер оюн борбору. Каттоосуз, акысыз 36000+ оюн.',
       footerCategories:'Категориялар', footerPopular:'Популярдуу', footerNew:'Жаңылар',
-      footerInfo:'Маалымат', footerAboutUs:'Биз жөнүндө', footerContact:'Telegram',
+      footerEmail:'Электрондук почта', footerInfo:'Маалымат', footerAboutUs:'Биз жөнүндө', footerContact:'WhatsApp',
       footerPrivacy:'Купуялуулук', footerTerms:'Шарттар',
       gamesProvidedBy:'Оюндарды камсыздаган',gamesRights:'Бардык оюндар алардын иштеп чыгуучуларынын менчиги',footerTagline:'Бардык оюндар HTML5, мобилге шайкеш',
       ratingPlay:'ойнолду', restartConfirm:'Оюнду кайра баштоо? (Жаңы жарнама көрсөтүлүшү мүмкүн)', loadMore:'Көбүрөк жүктөө', noResults:'Эч кандай оюн табылган жок', freePlay:'Акысыз ойноо',
@@ -85,7 +85,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       adArea:'Реклама', adSide:'Реклама<br>(Боковая)',
       footerAbout:'Самый быстрый игровой портал в Кыргызстане. 36000+ бесплатных игр.',
       footerCategories:'Категории', footerPopular:'Популярное', footerNew:'Новинки',
-      footerInfo:'Информация', footerAboutUs:'О нас', footerContact:'Telegram',
+      footerEmail:'Эл. почта', footerInfo:'Информация', footerAboutUs:'О нас', footerContact:'WhatsApp',
       footerPrivacy:'Конфиденциальность', footerTerms:'Условия',
       gamesProvidedBy:'Игры предоставлены',gamesRights:'Все игры принадлежат их разработчикам',footerTagline:'Все игры HTML5, для мобильных',
       ratingPlay:'игр', restartConfirm:'Перезапустить игру? (Может появиться новая реклама)', loadMore:'Загрузить ещё', noResults:'Игры не найдены', freePlay:'Играть бесплатно',
@@ -115,7 +115,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       adArea:'Reklam Alanı', adSide:'Reklam<br>(Kenar)',
       footerAbout:'Türkiye ve Orta Asyanın en hızlı tarayıcı oyun merkezi. 36000+ ücretsiz oyun.',
       footerCategories:'Kategoriler', footerPopular:'Popüler', footerNew:'Yeniler',
-      footerInfo:'Bilgi', footerAboutUs:'Hakkımızda', footerContact:'Telegram',
+      footerEmail:'E-posta', footerInfo:'Bilgi', footerAboutUs:'Hakkımızda', footerContact:'WhatsApp',
       footerPrivacy:'Gizlilik', footerTerms:'Kullanım',
       gamesProvidedBy:'Oyunları sağlayan',gamesRights:'Tüm oyunlar ilgili geliştiricilerin malıdır',footerTagline:'Tüm oyunlar HTML5, mobil uyumlu',
       ratingPlay:'oynama', restartConfirm:'Oyunu yeniden başlat? (Yeni bir reklam görünebilir)', loadMore:'Daha fazla yükle', noResults:'Oyun bulunamadı', freePlay:'Ücretsiz oyna',
@@ -145,7 +145,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       adArea:'Ad Space', adSide:'Ad<br>(Sidebar)',
       footerAbout:'The fastest browser gaming hub in Central Asia. 36000+ free games.',
       footerCategories:'Categories', footerPopular:'Popular', footerNew:'New',
-      footerInfo:'Info', footerAboutUs:'About', footerContact:'Telegram',
+      footerEmail:'Email', footerInfo:'Info', footerAboutUs:'About', footerContact:'WhatsApp',
       footerPrivacy:'Privacy', footerTerms:'Terms',
       gamesProvidedBy:'Games provided by',gamesRights:'All games property of their respective developers',footerTagline:'All games HTML5, mobile friendly',
       ratingPlay:'plays', restartConfirm:'Restart the game? (A new ad may be shown)', loadMore:'Load more', noResults:'No games found', freePlay:'Play free',
@@ -497,7 +497,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>🤝 Our Partners</h2>' +
         '<p>Games on VuMaTech are provided through our partnership with <a href="https://gamemonetize.com" target="_blank" rel="noopener">GameMonetize.com</a>, one of the world\'s leading HTML5 game distribution platforms. All games remain the intellectual property of their respective developers.</p>' +
         '<h2>📞 Contact</h2>' +
-        '<p>Have questions, suggestions, or feedback? Contact us on Telegram: <a href="https://t.me/vumatech" onclick="return vmtTelegramAc(event)">@vumatech</a></p>' +
+        '<p>Have questions, suggestions, or feedback? Reach us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a>.</p>' +
         '<p>Parent Company: <a href="https://vumatech.net" target="_blank" rel="noopener">VuMaTech.net</a> · Location: Bishkek, Kyrgyzstan</p>' +
         '<h2>📜 Legal</h2>' +
         '<p><a href="?page=privacy" onclick="return vmtGotoPage(\'privacy\', event)">Privacy Policy</a> · <a href="?page=terms" onclick="return vmtGotoPage(\'terms\', event)">Terms of Service</a></p>'
@@ -524,7 +524,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>4. Data Sharing</h2>' +
         '<p>We do not sell your personal data. We may share aggregated, non-personally identifiable information with advertising partners (Google AdSense), analytics providers, game content providers (GameMonetize), and legal authorities if required by law.</p>' +
         '<h2>5. Your Rights (GDPR, KVKK, CCPA)</h2>' +
-        '<p>You may have rights to access, rectify, erase, restrict, object to, or port your data. To exercise these rights, contact us on Telegram at <a href="https://t.me/vumatech" onclick="return vmtTelegramAc(event)">@vumatech</a>.</p>' +
+        '<p>You may have rights to access, rectify, erase, restrict, object to, or port your data. To exercise these rights, contact us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a>.</p>' +
         '<h2>6. Children\'s Privacy</h2>' +
         '<p>Our Service does not knowingly target children under 13. We recommend parental supervision for younger children.</p>' +
         '<h2>7. Data Security</h2>' +
@@ -534,7 +534,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>9. Changes to This Policy</h2>' +
         '<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>' +
         '<h2>10. Contact</h2>' +
-        '<p>Telegram: <a href="https://t.me/vumatech" onclick="return vmtTelegramAc(event)">@vumatech</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>'
+        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>'
     },
     terms: {
       title: 'Terms of Service',
@@ -567,7 +567,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>10. Governing Law</h2>' +
         '<p>These Terms are governed by the laws of the Kyrgyz Republic. Disputes shall be resolved in courts of Bishkek, Kyrgyzstan.</p>' +
         '<h2>11. Contact</h2>' +
-        '<p>Telegram: <a href="https://t.me/vumatech" onclick="return vmtTelegramAc(event)">@vumatech</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>' +
+        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>' +
         '<h2>12. Acknowledgments</h2>' +
         '<p>VuMaTech Game is powered by <a href="https://gamemonetize.com" target="_blank" rel="noopener">GameMonetize.com</a> (games), Cloudflare Pages (hosting), and Google AdSense (advertising).</p>'
     }
@@ -751,31 +751,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
 
 
 
-  // ==================== TELEGRAM AKILLI AÇICI ====================
-  // Masaüstünde web.telegram.org, mobilde tg:// uygulama şeması
-  window.vmtTelegramAc = function(ev) {
-    if (ev) { ev.preventDefault(); ev.stopPropagation(); }
-    var kullanici = 'vumatech';
-    var mobil = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
-    if (mobil) {
-      // Mobilde Telegram uygulamasını aç; yoksa web'e fallback
-      var zaman = Date.now();
-      var tgUrl = 'tg://resolve?domain=' + kullanici;
-      var webUrl = 'https://t.me/' + kullanici;
-      // Önce uygulama şemasını dene
-      window.location.href = tgUrl;
-      // 1.5 saniye içinde sayfa aktifse (uygulama açılmadıysa) web'e yönlendir
-      setTimeout(function() {
-        if (Date.now() - zaman < 1800) {
-          window.location.href = webUrl;
-        }
-      }, 1500);
-    } else {
-      // Masaüstünde Telegram Web'i yeni sekmede aç
-      window.open('https://web.telegram.org/k/#@' + kullanici, '_blank', 'noopener');
-    }
-    return false;
-  };
+
 
   // ==================== SEKME KAYDIRMA ====================
   window.vmtTabScroll = function(dir) {

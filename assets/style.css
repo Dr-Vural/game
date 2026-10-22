@@ -294,7 +294,7 @@ input { font-family: inherit; }
    TEMA TOGGLE BUTONU
    ============================================ */
 .vmt-theme-toggle {
-  background: white;
+  background: var(--surface);
   border: 1.5px solid var(--line);
   border-radius: 50%;
   width: 40px;
@@ -426,7 +426,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 .vmt-parent-link .text { display: none; }
 .vmt-parent-link:hover {
   border-color: var(--blue);
-  background: white;
+  background: var(--surface);
   color: var(--blue);
   box-shadow: 0 4px 12px rgba(37,99,235,0.15);
 }
@@ -448,7 +448,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 .vmt-search-overlay {
   position: fixed;
   top: 0; left: 0; right: 0;
-  background: white;
+  background: var(--surface);
   padding: 12px 16px;
   z-index: 200;
   display: none;
@@ -470,7 +470,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 .vmt-search-overlay input:focus {
   outline: none;
   border-color: var(--blue);
-  background: white;
+  background: var(--surface);
 }
 .vmt-search-close {
   width: 40px; height: 40px;
@@ -497,7 +497,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
@@ -563,7 +563,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 .vmt-search-desktop input:focus {
   outline: none;
   border-color: var(--blue);
-  background: white;
+  background: var(--surface);
   box-shadow: 0 0 0 4px var(--blue-light);
 }
 .vmt-search-desktop::before {
@@ -603,7 +603,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: white;
+  background: var(--surface);
   border: 1.5px solid var(--line);
   padding: 5px 12px 5px 6px;
   border-radius: 999px;
@@ -765,7 +765,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: white;
+  background: var(--surface);
   color: var(--blue);
   border: 1.5px solid var(--line);
   cursor: pointer;
@@ -806,7 +806,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 
 .vmt-tab {
   padding: 8px 12px;
-  background: white;
+  background: var(--surface);
   border: 1.5px solid var(--line);
   border-radius: 10px;
   font-size: 12px;
@@ -1340,7 +1340,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   padding: 0 16px;
 }
 .vmt-skeleton-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
@@ -1390,7 +1390,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   color: var(--ink-2);
   line-height: 1.7;
 }
-.vmt-page > * { background: white; }
+.vmt-page > * { background: var(--surface); }
 .vmt-page h1 {
   font-size: 28px;
   font-weight: 900;
@@ -1400,7 +1400,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   padding: 24px 24px 0;
 }
 .vmt-page > h1:first-child {
-  background: white;
+  background: var(--surface);
   border-radius: var(--radius) var(--radius) 0 0;
   border: 1px solid var(--line);
   border-bottom: 0;
@@ -1410,7 +1410,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   font-size: 14px;
   padding: 0 24px 16px;
   margin: 0;
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-top: 0;
   border-bottom: 0;
@@ -1422,7 +1422,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   padding: 24px 24px 10px;
   color: var(--ink);
   letter-spacing: -0.3px;
-  background: white;
+  background: var(--surface);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
 }
@@ -1432,7 +1432,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   margin: 0;
   padding: 12px 24px 6px;
   color: var(--ink);
-  background: white;
+  background: var(--surface);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
 }
@@ -1440,14 +1440,14 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   margin: 0;
   padding: 4px 24px 14px;
   color: var(--ink-2);
-  background: white;
+  background: var(--surface);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
 }
 .vmt-page ul {
   margin: 0;
   padding: 0 24px 14px 44px;
-  background: white;
+  background: var(--surface);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
 }
@@ -1464,7 +1464,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 .vmt-page a:hover { text-decoration: underline; }
 .vmt-page strong { color: var(--ink); font-weight: 700; }
 .vmt-page-back-wrap {
-  background: white;
+  background: var(--surface);
   padding: 20px 24px 24px;
   text-align: center;
   border: 1px solid var(--line);
@@ -1505,7 +1505,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   padding: 16px 24px;
-  background: white;
+  background: var(--surface);
   border-left: 1px solid var(--line);
   border-right: 1px solid var(--line);
 }
@@ -1677,7 +1677,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 
 /* Stats kart (yan kenar) */
 .vmt-stats-card {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 14px;
@@ -1783,7 +1783,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   text-align: center;
   padding: 40px 20px;
   color: var(--ink-2);
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   margin: 20px 0;
@@ -1851,7 +1851,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
   display: none;
 }
 .vmt-feat-overlay { z-index: 2; position: absolute; bottom: 0; left: 0; right: 0; }
-.vmt-card-info { z-index: 2; position: relative; background: white; }
+.vmt-card-info { z-index: 2; position: relative; background: var(--surface); }
 .vmt-card-cover { color: transparent; }
 .vmt-feat-cover { color: transparent; }
 
@@ -1983,7 +1983,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 }
 .vmt-btn {
   padding: 10px 16px;
-  background: white;
+  background: var(--surface);
   border: 1.5px solid var(--line);
   border-radius: 10px;
   font-size: 13px;
@@ -2013,7 +2013,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 }
 
 .vmt-game-info {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px;
@@ -2056,7 +2056,7 @@ body, .vmt-header, .vmt-footer, .vmt-tab, .vmt-card, .vmt-feat-card,
 }
 
 .vmt-similar {
-  background: white;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 14px;
@@ -2597,7 +2597,7 @@ body {
   aspect-ratio: 4/3;
   border-radius: 12px;
   overflow: hidden;
-  background: #f1f5f9;
+  background: var(--surface-2);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 .vmt-strip-img img {
@@ -2727,3 +2727,13 @@ body {
 }
 
 
+
+/* Karanlık tema: ikincil düğmeler ve yan kartlar */
+:root[data-theme="dark"] .vmt-btn { color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] .vmt-btn:hover, :root[data-theme="dark"] .vmt-btn:active { background: var(--surface-2); }
+:root[data-theme="dark"] .vmt-stats-card .num,
+:root[data-theme="dark"] .vmt-stats-row .num { color: var(--ink); }
+:root[data-theme="dark"] .vmt-similar h3 { color: var(--ink-2); }
+:root[data-theme="dark"] .vmt-similar-info h4 { color: var(--ink); }
+:root[data-theme="dark"] .vmt-similar-info p,
+:root[data-theme="dark"] .vmt-similar-info span { color: var(--dim); }
