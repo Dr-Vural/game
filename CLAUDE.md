@@ -6,4 +6,4 @@
 - Statik site: derleme adımı yok, çerçeve yok. Yeni bağımlılık ekleme.
 - Kodda ve metinlerde "Blogger" / "blogspot" adı geçmesin.
 - Oyun verisi GameMonetize'dan `vumatech-proxy.vuraloglu.workers.dev` Worker'ı üzerinden gelir; o Worker bu reponun parçası değil.
-- İletişim: WhatsApp +996 999 101 444 (wa.me/996999101444), e-posta vumatechnet@gmail.com. Diller: KY (varsayılan), RU, TR, EN.
+- İletişim: WhatsApp +996 999 101 444 (wa.me/996999101444), e-posta: Türkçe arayüzde destek@vumatech.net, diğer dillerde support@vumatech.net (`a.vmt-mail` + `epostaGuncelle()`). vumatechnet@gmail.com sayfalarda kullanılmaz. Diller: KY (varsayılan), RU, TR, EN.

@@ -275,6 +275,17 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
     return 'ky';
   }
 
+  // Türkçe arayüzde destek@, diğer dillerde support@ adresi gösterilir
+  function epostaAdresi() { return aktifDil === 'tr' ? 'destek@vumatech.net' : 'support@vumatech.net'; }
+  function epostaGuncelle() {
+    var adres = epostaAdresi();
+    var linkler = document.querySelectorAll('a.vmt-mail');
+    for (var i = 0; i < linkler.length; i++) {
+      linkler[i].href = 'mailto:' + adres;
+      if (!linkler[i].hasAttribute('data-i18n')) linkler[i].textContent = adres;
+    }
+  }
+
   function ceviriUygula(dil) {
     aktifDil = dil;
     var t = I18N[dil];
@@ -298,6 +309,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
 
     var current = document.getElementById('vmt-lang-toggle');
     if (current) current.textContent = FLAG_EMOJI[dil];
+    epostaGuncelle();
 
     var items = document.querySelectorAll('.vmt-lang-item');
     for (var k = 0; k < items.length; k++) {
@@ -497,7 +509,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>🤝 Our Partners</h2>' +
         '<p>Games on VuMaTech are provided through our partnership with <a href="https://gamemonetize.com" target="_blank" rel="noopener">GameMonetize.com</a>, one of the world\'s leading HTML5 game distribution platforms. All games remain the intellectual property of their respective developers.</p>' +
         '<h2>📞 Contact</h2>' +
-        '<p>Have questions, suggestions, or feedback? Reach us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a>.</p>' +
+        '<p>Have questions, suggestions, or feedback? Reach us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a class="vmt-mail" href="mailto:support@vumatech.net">support@vumatech.net</a>.</p>' +
         '<p>Parent Company: <a href="https://vumatech.net" target="_blank" rel="noopener">VuMaTech.net</a> · Location: Bishkek, Kyrgyzstan</p>' +
         '<h2>📜 Legal</h2>' +
         '<p><a href="?page=privacy" onclick="return vmtGotoPage(\'privacy\', event)">Privacy Policy</a> · <a href="?page=terms" onclick="return vmtGotoPage(\'terms\', event)">Terms of Service</a></p>'
@@ -524,7 +536,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>4. Data Sharing</h2>' +
         '<p>We do not sell your personal data. We may share aggregated, non-personally identifiable information with advertising partners (Google AdSense), analytics providers, game content providers (GameMonetize), and legal authorities if required by law.</p>' +
         '<h2>5. Your Rights (GDPR, KVKK, CCPA)</h2>' +
-        '<p>You may have rights to access, rectify, erase, restrict, object to, or port your data. To exercise these rights, contact us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a>.</p>' +
+        '<p>You may have rights to access, rectify, erase, restrict, object to, or port your data. To exercise these rights, contact us on WhatsApp at <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> or by email at <a class="vmt-mail" href="mailto:support@vumatech.net">support@vumatech.net</a>.</p>' +
         '<h2>6. Children\'s Privacy</h2>' +
         '<p>Our Service does not knowingly target children under 13. We recommend parental supervision for younger children.</p>' +
         '<h2>7. Data Security</h2>' +
@@ -534,7 +546,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>9. Changes to This Policy</h2>' +
         '<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>' +
         '<h2>10. Contact</h2>' +
-        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>'
+        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a class="vmt-mail" href="mailto:support@vumatech.net">support@vumatech.net</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>'
     },
     terms: {
       title: 'Terms of Service',
@@ -567,7 +579,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h2>10. Governing Law</h2>' +
         '<p>These Terms are governed by the laws of the Kyrgyz Republic. Disputes shall be resolved in courts of Bishkek, Kyrgyzstan.</p>' +
         '<h2>11. Contact</h2>' +
-        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a href="mailto:vumatechnet@gmail.com">vumatechnet@gmail.com</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>' +
+        '<p>WhatsApp: <a href="https://wa.me/996999101444" target="_blank" rel="noopener">+996 999 101 444</a> · Email: <a class="vmt-mail" href="mailto:support@vumatech.net">support@vumatech.net</a> · Operator: VuMaTech, Bishkek, Kyrgyzstan</p>' +
         '<h2>12. Acknowledgments</h2>' +
         '<p>VuMaTech Game is powered by <a href="https://gamemonetize.com" target="_blank" rel="noopener">GameMonetize.com</a> (games), Cloudflare Pages (hosting), and Google AdSense (advertising).</p>'
     }
@@ -631,7 +643,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
 
     // API çağrısı
     var url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(metin) +
-              '&langpair=en|' + dil + '&de=vumatechnet@gmail.com';
+              '&langpair=en|' + dil + '&de=support@vumatech.net';
 
     fetch(url, {method: 'GET'})
       .then(function(r) { return r.json(); })
@@ -1809,6 +1821,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
     ana.innerHTML = '<div class="vmt-page">' + icerik.body +
       '<div class="vmt-page-back-wrap"><a href="/" onclick="return vmtGoHome(event)" class="vmt-btn primary">← ' + t.backHome + '</a></div>' +
       '</div>';
+    epostaGuncelle();
     if (typeof splashKapat === 'function') splashKapat();
   }
 
@@ -1955,6 +1968,23 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
     var current = document.getElementById('vmt-lang-toggle');
     if (current) current.textContent = FLAG_EMOJI[aktifDil];
     document.documentElement.lang = aktifDil;
+
+    // Sabit arayüz metinlerini (üst menü, alt bilgi) kayıtlı dile çevir
+    var ilkEls = document.querySelectorAll('[data-i18n]');
+    for (var ie = 0; ie < ilkEls.length; ie++) {
+      var ik = ilkEls[ie].getAttribute('data-i18n');
+      if (t[ik]) ilkEls[ie].innerHTML = t[ik];
+    }
+    var ilkHtml = document.querySelectorAll('[data-i18n-html]');
+    for (var ih = 0; ih < ilkHtml.length; ih++) {
+      var ihk = ilkHtml[ih].getAttribute('data-i18n-html');
+      if (t[ihk]) ilkHtml[ih].innerHTML = t[ihk];
+    }
+    ['vmt-search-input', 'vmt-search-input-desktop'].forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el && t.searchPlaceholder) el.placeholder = t.searchPlaceholder;
+    });
+    epostaGuncelle();
 
     setupEvents();
     sayfaRoute();
