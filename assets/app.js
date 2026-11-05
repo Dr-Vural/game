@@ -529,7 +529,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<h3>1.2 Cookies and Tracking</h3>' +
         '<p>We use cookies and similar tracking technologies. You can instruct your browser to refuse all cookies, but some features may not function properly without them.</p>' +
         '<h3>1.3 Local Storage</h3>' +
-        '<p>We use browser localStorage to cache game data for faster loading. This data is stored only on your device and is not transmitted to our servers.</p>' +
+        '<p>We use browser localStorage to cache game data for faster loading and to keep the random number described in 1.4. The cached game data stays on your device and is never sent to our servers.</p>' +
         '<h3>1.4 Usage Counter</h3>' +
         '<p data-i18n="privacyCounter"></p>' +
         '<h2>2. Third-Party Services</h2>' +
