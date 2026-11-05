@@ -57,6 +57,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       footerCategories:'Категориялар', footerPopular:'Популярдуу', footerNew:'Жаңылар',
       footerEmail:'Электрондук почта', footerInfo:'Маалымат', footerAboutUs:'Биз жөнүндө', footerContact:'WhatsApp',
       footerPrivacy:'Купуялуулук', footerTerms:'Шарттар',
+      privacyCounter:'Канча адам ойноп жатканын билүү үчүн браузериңизге кокус номер берилет; күнүнө бир жолу ушул номер жана сиз ачкан оюндун аталышы гана жөнөтүлөт. Атыңыз жана электрондук почтаңыз жөнөтүлбөйт.',
       gamesProvidedBy:'Оюндарды камсыздаган',gamesRights:'Бардык оюндар алардын иштеп чыгуучуларынын менчиги',footerTagline:'Бардык оюндар HTML5, мобилге шайкеш',
       ratingPlay:'ойнолду', restartConfirm:'Оюнду кайра баштоо? (Жаңы жарнама көрсөтүлүшү мүмкүн)', loadMore:'Көбүрөк жүктөө', noResults:'Эч кандай оюн табылган жок', freePlay:'Акысыз ойноо',
       promoTitle:'Сайт ачуу керекпи?', promoSub:'VuMaTech менен профессионалдуу веб-дизайн. Сайтыңызды ишеничтүү колдонгого тапшырыңыз.', promoBtn:'Изилдөө',
@@ -87,6 +88,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       footerCategories:'Категории', footerPopular:'Популярное', footerNew:'Новинки',
       footerEmail:'Эл. почта', footerInfo:'Информация', footerAboutUs:'О нас', footerContact:'WhatsApp',
       footerPrivacy:'Конфиденциальность', footerTerms:'Условия',
+      privacyCounter:'Чтобы знать, сколько людей играет, браузеру присваивается случайный номер; раз в день отправляется только этот номер и название игры, которую вы открыли. Ваше имя и электронная почта не передаются.',
       gamesProvidedBy:'Игры предоставлены',gamesRights:'Все игры принадлежат их разработчикам',footerTagline:'Все игры HTML5, для мобильных',
       ratingPlay:'игр', restartConfirm:'Перезапустить игру? (Может появиться новая реклама)', loadMore:'Загрузить ещё', noResults:'Игры не найдены', freePlay:'Играть бесплатно',
       promoTitle:'Нужен сайт?', promoSub:'Профессиональный веб-дизайн с VuMaTech. Доверьте свой сайт надёжной команде.', promoBtn:'Узнать больше',
@@ -117,6 +119,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       footerCategories:'Kategoriler', footerPopular:'Popüler', footerNew:'Yeniler',
       footerEmail:'E-posta', footerInfo:'Bilgi', footerAboutUs:'Hakkımızda', footerContact:'WhatsApp',
       footerPrivacy:'Gizlilik', footerTerms:'Kullanım',
+      privacyCounter:'Kaç kişinin oynadığını bilmek için tarayıcınıza rastgele bir numara verilir; günde bir kez yalnızca bu numara ve açtığınız oyunun adı gönderilir. Adınız ve e-postanız gönderilmez.',
       gamesProvidedBy:'Oyunları sağlayan',gamesRights:'Tüm oyunlar ilgili geliştiricilerin malıdır',footerTagline:'Tüm oyunlar HTML5, mobil uyumlu',
       ratingPlay:'oynama', restartConfirm:'Oyunu yeniden başlat? (Yeni bir reklam görünebilir)', loadMore:'Daha fazla yükle', noResults:'Oyun bulunamadı', freePlay:'Ücretsiz oyna',
       promoTitle:'Web sitenize ihtiyacınız var mı?', promoSub:'VuMaTech ile profesyonel web tasarım. Sitenizi güvenilir ellere emanet edin.', promoBtn:'Keşfet',
@@ -147,6 +150,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       footerCategories:'Categories', footerPopular:'Popular', footerNew:'New',
       footerEmail:'Email', footerInfo:'Info', footerAboutUs:'About', footerContact:'WhatsApp',
       footerPrivacy:'Privacy', footerTerms:'Terms',
+      privacyCounter:'To count how many people play, your browser is given a random number. Once a day, only that number and the name of the game you opened are sent. Your name and email are never sent.',
       gamesProvidedBy:'Games provided by',gamesRights:'All games property of their respective developers',footerTagline:'All games HTML5, mobile friendly',
       ratingPlay:'plays', restartConfirm:'Restart the game? (A new ad may be shown)', loadMore:'Load more', noResults:'No games found', freePlay:'Play free',
       promoTitle:'Need a website?', promoSub:'Professional web design with VuMaTech. Trust your project to experienced hands.', promoBtn:'Explore',
@@ -526,6 +530,8 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
         '<p>We use cookies and similar tracking technologies. You can instruct your browser to refuse all cookies, but some features may not function properly without them.</p>' +
         '<h3>1.3 Local Storage</h3>' +
         '<p>We use browser localStorage to cache game data for faster loading. This data is stored only on your device and is not transmitted to our servers.</p>' +
+        '<h3>1.4 Usage Counter</h3>' +
+        '<p data-i18n="privacyCounter"></p>' +
         '<h2>2. Third-Party Services</h2>' +
         '<h3>2.1 Google AdSense</h3>' +
         '<p>We use Google AdSense to display advertisements. Google may use cookies to serve ads based on your prior visits. You may opt out at <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">Google Ad Settings</a>.</p>' +
@@ -1567,6 +1573,7 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
       }
 
       document.title = oyun.title + ' - VuMaTech Game';
+      oyunSayacGonder(oyun);
       var renk = renkSec(oyun.id);
 
       ana.innerHTML =
@@ -1821,6 +1828,11 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
     ana.innerHTML = '<div class="vmt-page">' + icerik.body +
       '<div class="vmt-page-back-wrap"><a href="/" onclick="return vmtGoHome(event)" class="vmt-btn primary">← ' + t.backHome + '</a></div>' +
       '</div>';
+    var ceviriEls = ana.querySelectorAll('[data-i18n]');
+    for (var c = 0; c < ceviriEls.length; c++) {
+      var ck = ceviriEls[c].getAttribute('data-i18n');
+      if (t[ck]) ceviriEls[c].textContent = t[ck];
+    }
     epostaGuncelle();
     if (typeof splashKapat === 'function') splashKapat();
   }
@@ -1828,6 +1840,14 @@ console.log('VuMaTech v7: Dinamik API sistemi yükleniyor');
   // ==================== UTIL ====================
 
   // Oyun objesinin metin alanlarını normalize et (entity decode)
+  function oyunSayacGonder(oyun) {
+    if (typeof window.vmlSayac !== 'function') return;
+    var kaynak = String(oyun.title || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    var slug = kaynak.replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60).replace(/-+$/, '');
+    if (!slug) slug = String(oyun.id || '').toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+    if (slug) window.vmlSayac('oyun/' + slug);
+  }
+
   function normalizeOyun(o) {
     if (!o) return o;
     if (o.title) o.title = htmlDecode(o.title);

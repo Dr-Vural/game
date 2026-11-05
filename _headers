@@ -4,6 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: connect-src 'self' https://vumatech-proxy.vuraloglu.workers.dev https://api.codetabs.com https://api.mymemory.translated.net https://labs.vumatech.net
 
 # Statik dosyalar için uzun önbellek (versiyonlu yüklenirler)
 /assets/*
